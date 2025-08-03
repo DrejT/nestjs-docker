@@ -7,10 +7,10 @@ WORKDIR /app
 # Install git inside the container to clone the repository
 RUN apk add --no-cache git
 
-# Clone your project from the Git repository
-# IMPORTANT: Replace `YOUR_GIT_REPO_URL` with your actual repository URL.
-# For private repos, you'll need to configure SSH keys or a token.
-RUN git clone git@github.com:DrejT/nestjs-docker.git .
+# Clone your project from the Git repository using the HTTPS URL
+# This URL does not require an SSH client, making the build more portable.
+# For private repositories, you would need to use an access token.
+RUN git clone https://github.com/DrejT/nestjs-docker.git .
 
 # Install pnpm and then the dependencies
 RUN npm install -g pnpm
