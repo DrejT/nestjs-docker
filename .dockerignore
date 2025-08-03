@@ -1,0 +1,19 @@
+# Dependency directories
+node_modules
+dist
+pnpm-lock.yaml
+# Log files
+npm-debug.log
+# OS files
+.DS_Store
+# IDE files
+.idea
+.vscode
+# Environment variables
+.env
+.env.local
+# Test directories
+/test
+# Documentation and build files
+README.md
+nest-cli.json
